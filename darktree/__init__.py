@@ -1,0 +1,1 @@
+from darktree import main
