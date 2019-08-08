@@ -1,0 +1,17 @@
+
+jobs:
+- job: Windows Build
+  pool:
+    vmImage: 'windows-latest'
+  steps:
+  - bash: echo "Hello world"
+- job: Linux Build
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - bash: echo "Hello world"
+- job: OSX Build
+  pool:
+    vmImage: 'macOS-latest'
+  steps:
+  - bash: echo "Hello world"
