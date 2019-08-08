@@ -1,16 +1,16 @@
 
 jobs:
-- job: Windows-Build
+- job: Windows_Build
   pool:
     vmImage: 'windows-latest'
   steps:
   - bash: echo "Hello world"
-- job: Linux-Build
+- job: Linux_Build
   pool:
     vmImage: 'ubuntu-16.04'
   steps:
   - bash: echo "Hello world"
-- job: OSX-Build
+- job: OSX_Build
   pool:
     vmImage: 'macOS-latest'
   steps:
