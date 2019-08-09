@@ -1,0 +1,9 @@
+steps:
+  - task: UsePythonVersion@0
+    displayName: 'Use Python $(python.version)'
+    inputs:
+      versionSpec: '$(python.version)'
+  - script: pip install pyinstaller
+    displayName: 'Install PyInstaller'
+  - script: pyinstaller darktree.spec
+    displayName: 'Running PyInstaller'
