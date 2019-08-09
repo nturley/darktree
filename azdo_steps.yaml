@@ -13,4 +13,5 @@ steps:
     displayName: 'Running PyInstaller'
   - task: PublishBuildArtifacts@1
     inputs:
-      pathtoPublish: 'dist' 
+      pathtoPublish: 'dist'
+      artifactName: 'drop $(os) $(python.version)'
