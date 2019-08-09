@@ -18,10 +18,26 @@ jobs:
 - job: Linux_Build
   pool:
     vmImage: 'ubuntu-16.04'
+  strategy:
+    matrix:
+      Python35:
+        python.version: '3.5'
+      Python36:
+        python.version: '3.6'
+      Python37:
+        python.version: '3.7'
   steps:
   - template: azdo_steps.yaml
 - job: OSX_Build
   pool:
     vmImage: 'macOS-latest'
+  strategy:
+    matrix:
+      Python35:
+        python.version: '3.5'
+      Python36:
+        python.version: '3.6'
+      Python37:
+        python.version: '3.7'
   steps:
   - template: azdo_steps.yaml
