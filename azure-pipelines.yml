@@ -3,6 +3,8 @@ trigger:
   - master
 jobs:
 - job: Windows_Build
+  variables:
+    os: windows
   pool:
     vmImage: 'windows-latest'
   strategy:
@@ -16,6 +18,8 @@ jobs:
   steps:
   - template: azdo_steps.yaml
 - job: Linux_Build
+  variables:
+    os: linux
   pool:
     vmImage: 'ubuntu-16.04'
   strategy:
@@ -29,6 +33,8 @@ jobs:
   steps:
   - template: azdo_steps.yaml
 - job: OSX_Build
+  variables:
+    os: osx
   pool:
     vmImage: 'macOS-latest'
   strategy:
