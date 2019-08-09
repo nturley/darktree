@@ -14,20 +14,14 @@ jobs:
       Python37:
         python.version: '3.7'
   steps:
-  - bash: echo "Hello world"
-  - task: UsePythonVersion@0
-    displayName: 'Use Python $(python.version)'
-    inputs:
-      versionSpec: '$(python.version)'
-  - script: pip install pyinstaller
-    displayName: 'Install PyInstaller'
+  - template: azdo_steps.yaml
 - job: Linux_Build
   pool:
     vmImage: 'ubuntu-16.04'
   steps:
-  - bash: echo "Hello world"
+  - template: azdo_steps.yaml
 - job: OSX_Build
   pool:
     vmImage: 'macOS-latest'
   steps:
-  - bash: echo "Hello world"
+  - template: azdo_steps.yaml
