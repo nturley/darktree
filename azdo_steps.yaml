@@ -3,6 +3,8 @@ steps:
     displayName: 'Use Python $(python.version)'
     inputs:
       versionSpec: '$(python.version)'
+  - script: pip install .
+    displayName: 'Install package dependencies'
   - script: pip install pyinstaller
     displayName: 'Install PyInstaller'
   - script: pyinstaller darktree.spec
